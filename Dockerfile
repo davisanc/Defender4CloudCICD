@@ -1,12 +1,19 @@
-FROM ubuntu:latest
+FROM node:14
 
-# Create an App directory
-WORKDIR /home/app
+# Create app directory
+WORKDIR /usr/src/app
 
-RUN apt-get update
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
 
-RUN apt-get -y install nodejs
-RUN apt install -y npm
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
 
 EXPOSE 8080
-CMD ["ndoe","server.js"]
+CMD [ "node", "server.js" ]
