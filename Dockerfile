@@ -1,4 +1,4 @@
-FROM: node:14
+FROM ubuntu:latest
 
 # Create an App directory
 WORKDIR /home/app
