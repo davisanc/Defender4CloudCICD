@@ -1,4 +1,5 @@
 # Basic worflow to test the ASC CICD Vulnerability Scanning feature (Public Preview)
+# this is just a comment
 name: Vulnerable Docker image CI
 # Controls when the workflow will run (push or pull for the master branch)
 on:
