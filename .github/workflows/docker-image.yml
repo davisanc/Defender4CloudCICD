@@ -12,6 +12,7 @@ jobs:
   buildScanAndPush:
     runs-on: ubuntu-latest
     env:
+    #changing acr to AIRS subscription from ninjacat tenant
       ACR_REPO_NAME: web-dvwa
       ACR_SERVER: acrninja.azurecr.io
     steps:
